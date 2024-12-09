@@ -39,7 +39,7 @@ def deleteRecord(data):#удаления записи
         return 0
     for stars in data: #цикл с поиском записи и удалением её из data
         if inpid == stars["id"]:
-            data.pop(a)
+            data.pop(a) #удаляет и возвращает запись
             flag = False
         a += 1
     print("Запись не найдена\n" if flag else "")
