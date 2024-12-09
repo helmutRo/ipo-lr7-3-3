@@ -48,7 +48,7 @@ def closingProg(data, num): #закрытие программы и перено
     with open('stars.json', 'w', encoding='utf-8') as file: #инф записывается обратно в файл
         json.dump(data, file, indent=4, ensure_ascii=True)
     exit()
-def menu(data, num): #функция "меню"
+def menu(data, num): #меню
     print("1 - Вывести все записи\n2 - Вывести запись по полю\n3 - Добавить запись\n4 - Удалить запись по полю\n5 - Выйти из программы\n")
     b = int(input("Выберите действие(введите число): ")) #запрашивает действие пользователя в переменную
     if b == 1: #выводит все записи
