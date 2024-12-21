@@ -19,14 +19,14 @@ def record1(data): # вывод определенной записи
     print("Запись не найдена\n" if flag else "")
 def newRecord(data): #создание записи
     newStar= {"id":0, "name":"", "constellation":"", "is_visible":False,"radius":0} #множество для добавляемой записи
-    newStar["id"] = int(input("введите id: "))
-    newStar["name"] = input("введите название звезды: ")
-    newStar["constellation"] = input("введите название созвездия: ")
     try:
+        newStar["id"] = int(input("введите id: "))
+        newStar["name"] = input("введите название звезды: ")
+        newStar["constellation"] = input("введите название созвездия: ")
         newStar["is_visible"] = (True if newStar["constellation"] == "да" else "нет")
+        newStar["radius"] = int(input("введите радиус: "))
     except:
         print("неправильное значение\n")
-    newStar["radius"] = int(input("введите радиус: "))
     data.append(newStar) # записывается в data
 def deleteRecord(data):#удаления записи
     a = 0#переменная для номера записи
